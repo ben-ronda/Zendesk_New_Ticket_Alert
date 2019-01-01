@@ -31,4 +31,4 @@ ___Note:___ _If you do not have Homebrew you can install it by running:_
 
 `$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-_You can find more information about Homebrew on the official site: https://brew.sh/ _
+_You can find more information about Homebrew on the official site: https://brew.sh/ 
