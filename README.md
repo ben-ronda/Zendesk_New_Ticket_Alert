@@ -30,7 +30,8 @@ The first thing you need to do is make sure you have Python3 installed on you ma
 >
 >_You can find more information about Homebrew on the official site:_ https://brew.sh/
 
-Next, clone this repository to you machine.
+Next, clone this repository to your machine.
+`$ git clone https://github.com/ben-ronda/Zendesk_New_Ticket_Alert.git`
 
 Once you have done that you will need to `cd` in to the base level of the directory and create a file called `auth.py`
 
