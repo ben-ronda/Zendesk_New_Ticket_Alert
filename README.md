@@ -17,7 +17,7 @@ This project uses the following python modules:
 If you don't have pip installed but you are using Python3 then try running `pip3` instead of `pip`
 
 ***
-##Installation
+## Installation
 
 The first thing you need to do is make sure you have Python3 installed on you machine. In your terminal, run:
 
@@ -30,3 +30,5 @@ If you do not have Python3 installed then you can install it via Homebrew:
 ___Note:___ _If you do not have Homebrew you can install it by running:_
 
 `$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+_You can find more information about Homebrew on the official site: https://brew.sh/ _
