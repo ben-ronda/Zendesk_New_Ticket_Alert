@@ -14,4 +14,4 @@ This project uses the following python modules:
 * time
 * subprocess
 
-If you don't have pip installed but you are using Python3 then try running `pip3 ...` instead of `pip ...`
+If you don't have pip installed but you are using Python3 then try running `pip3` instead of `pip`
