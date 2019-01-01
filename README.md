@@ -23,12 +23,12 @@ The first thing you need to do is make sure you have Python3 installed on you ma
 
 `python3 --version`
 
-If you do not have Python3 installed then you can install it via Homebrew:
+    If you do not have Python3 installed then you can install it via Homebrew:
 
-`brew install python3`
+    `brew install python3`
 
-___Note:___ _If you do not have Homebrew you can install it by running:_
+    ___Note:___ _If you do not have Homebrew you can install it by running:_
 
-`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+    `$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-_You can find more information about Homebrew on the official site:_ https://brew.sh/
+    _You can find more information about Homebrew on the official site:_ https://brew.sh/
