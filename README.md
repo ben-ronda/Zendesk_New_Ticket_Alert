@@ -20,15 +20,27 @@ If you don't have pip installed but you are using Python3 then try running `pip3
 ## Installation
 
 The first thing you need to do is make sure you have Python3 installed on you machine. In your terminal, run:
+`$ python3 --version`
+>If you do not have Python3 installed then you can install it via Homebrew:
+>`$ brew install python3`
 
-`python3 --version`
+>___Note:___ _If you do not have Homebrew you can install it by running:_
+>`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+>
+>_You can find more information about Homebrew on the official site:_ https://brew.sh/
 
-    If you do not have Python3 installed then you can install it via Homebrew:
+Next, clone this repository to you machine.
 
-    `brew install python3`
+Once you have done that you will need to `cd` in to the base level of the directory and create a file called `auth.py`
 
-    ___Note:___ _If you do not have Homebrew you can install it by running:_
+`$ touch auth.py`
 
-    `$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+Inside you will need to write the following lines:
 
-    _You can find more information about Homebrew on the official site:_ https://brew.sh/
+    # Zendesk Authentication
+    url = 'https:/<your_subdomain.zendesk.com/api/v2/tickets.json'
+    email = 'your_email'
+    key = 'your_API_key'
+
+This will allow the tickets script to authenticate the Zendesk API calls.
+__Note:__ If you do not want to go through the effort of creating this file you can manually enter these credentials inside the script itself on lines 11-13. If you do this, you may also get rid of or comment out line 8 which calls on auth.py to access those global variables.
