@@ -30,8 +30,7 @@ The first thing you need to do is make sure you have Python3 installed on you ma
 >
 >_You can find more information about Homebrew on the official site:_ https://brew.sh/
 
-Next, clone this repository to your machine.
-`$ git clone https://github.com/ben-ronda/Zendesk_New_Ticket_Alert.git`
+Next, clone this repository to your machine: `$ git clone https://github.com/ben-ronda/Zendesk_New_Ticket_Alert.git`
 
 Once you have done that you will need to `cd` in to the base level of the directory and create a file called `auth.py`
 
@@ -45,4 +44,5 @@ Inside you will need to write the following lines:
     key = 'your_API_key'
 
 This will allow the tickets script to authenticate the Zendesk API calls.
+
 __Note:__ If you do not want to go through the effort of creating this file you can manually enter these credentials inside the script itself on lines 11-13. If you do this, you may also get rid of or comment out line 8 which calls on auth.py to access those global variables.
