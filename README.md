@@ -32,7 +32,7 @@ The first thing you need to do is make sure you have Python3 installed on you ma
 
 Next, clone this repository to your machine: `$ git clone https://github.com/ben-ronda/Zendesk_New_Ticket_Alert.git`
 
-Once you have done that you will need to `cd` in to the base level of the directory and create a file called `auth.py`
+Once you have done that you will need to `cd` in to the top level of the project directory and create a file called `auth.py`
 
 `$ touch auth.py`
 
