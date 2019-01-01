@@ -47,4 +47,4 @@ This will allow the tickets script to authenticate the Zendesk API calls.
 
 __Note:__ If you do not want to go through the effort of creating this file, you can manually enter these credentials inside the script itself on lines 11-13. If you do this, you may also get rid of or comment out line 8 which calls on auth.py to access those global variables.
 
-You will need to place a .mp3 file in the top level of the project directory and change the file name on line 34 of tickets file where you see `subprocess.call(['afplay', 'you_suffer.mp3'])`.
+You will need to place a .mp3 file in the top level of the project directory and change the file name on line 34 of tickets file where you see `subprocess.call(['afplay', 'you_suffer.mp3'])`. _You may also use m4a, WAV, AIFF, and supposedly a few other audio file types._
