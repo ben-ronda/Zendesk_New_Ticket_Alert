@@ -1,6 +1,4 @@
 # ZenAlert
-
-## A Python script that alerts when new Zendesk ticket comes in.
 #### Created by: [Ben Ronda](https://github.com/ben-ronda)
 ***
 ## Description
