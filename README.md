@@ -20,6 +20,7 @@ If you don't have pip installed but you are using Python3 then try running `pip3
 ## Installation
 
 The first thing you need to do is make sure you have Python3 installed on you machine. In your terminal, run:
+
 `$ python3 --version`
 >If you do not have Python3 installed then you can install it via Homebrew:
 >`$ brew install python3`
