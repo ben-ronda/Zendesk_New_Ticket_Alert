@@ -39,7 +39,7 @@ Once you have done that you will need to `cd` in to the top level of the project
 Inside you will need to write the following lines:
 
     # Zendesk Authentication
-    url = 'https:/<your_subdomain.zendesk.com/api/v2/tickets.json'
+    url = 'https:/your_subdomain.zendesk.com/api/v2/tickets.json'
     email = 'your_email'
     key = 'your_API_key'
 
