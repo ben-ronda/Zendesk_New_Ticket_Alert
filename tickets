@@ -14,7 +14,6 @@ token = auth.key
 
 local_new_tickets = functions.get_tickets(tickets_url, user, token) # sets intital local ticket count to match that of Zendesk
 
-# local_new_tickets = 0
 while True:
     url = tickets_url # resets url for looping
     zendesk_new_tickets = functions.get_tickets(url, user, token) # gets current ticket count from Zendesk
