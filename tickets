@@ -12,25 +12,12 @@ tickets_url = auth.url
 user = auth.email + '/token'
 token = auth.key
 
-local_new_tickets = functions.get_tickets(tickets_url, user, token)
+local_new_tickets = functions.get_tickets(tickets_url, user, token) # sets intital local ticket count to match that of Zendesk
 
 # local_new_tickets = 0
 while True:
     url = tickets_url # resets url for looping
-
-    # GET number of new tickets in Zendesk
-    # while url is not None:
-        # response = requests.get(url, auth=(user, token))
-        # data = response.json()
-        # tickets = data['tickets']
-        # zendesk_new_tickets = 0
-        #
-        # for ticket in tickets:
-        #     if ticket['status'] == 'new':
-        #         zendesk_new_tickets = zendesk_new_tickets + 1
-        # url = data['next_page']
-
-    zendesk_new_tickets = functions.get_tickets(url, user, token)
+    zendesk_new_tickets = functions.get_tickets(url, user, token) # gets current ticket count from Zendesk
 
     # Compare number of New Tickets locally stored to number of New Tickets in Zendesk
     if local_new_tickets < zendesk_new_tickets:
