@@ -45,7 +45,7 @@ Inside you will need to write the following lines:
 
 This will allow the tickets script to authenticate the Zendesk API calls.
 
-__Note:__ If you do not want to go through the effort of creating this file, you can manually enter these credentials inside the script itself on lines 11-13. If you do this, you may also get rid of or comment out line 8 which calls on auth.py to access those global variables.
+<!-- __Note:__ If you do not want to go through the effort of creating this file, you can manually enter these credentials inside the script itself on lines 11-13. If you do this, you may also get rid of or comment out line 8 which calls on auth.py to access those global variables. -->
 
 You will need to place a .mp3 file in the top level of the project directory and change the file name on line 34 of tickets file where you see `subprocess.call(['afplay', 'you_suffer.mp3'])`. _You may also use m4a, WAV, AIFF, and supposedly a few other audio file types._
 
@@ -61,5 +61,3 @@ If you want to be able to run this without typing `python3` then run the followi
 `$ chmod -x tickets`
 
 Now you can simply type `./tickets`
-
-The build currently can't grab the initial Zendesk ticket count without triggering the sound. Although in a way I guess it can be used to test to make sure the audio file is working...
