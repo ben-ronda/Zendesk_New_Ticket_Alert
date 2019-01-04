@@ -11,5 +11,5 @@ def get_tickets(url, user, token):
             if ticket['status'] == 'new':
                 zendesk_new_tickets = zendesk_new_tickets + 1
         url = data['next_page']
-
+        
     return zendesk_new_tickets

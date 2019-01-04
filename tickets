@@ -6,24 +6,39 @@ import time
 import subprocess
 import auth
 import functions
+import sys
 
 # AUTH
 tickets_url = auth.url
 user = auth.email + '/token'
 token = auth.key
 
-local_new_tickets = functions.get_tickets(tickets_url, user, token) # sets intital local ticket count to match that of Zendesk
 
-while True:
-    url = tickets_url # resets url for looping
-    zendesk_new_tickets = functions.get_tickets(url, user, token) # gets current ticket count from Zendesk
-
-    # Compare number of New Tickets locally stored to number of New Tickets in Zendesk
-    if local_new_tickets < zendesk_new_tickets:
-        print('LOUD MUSIC') #  Status Cue
+if len(sys.argv) > 1:
+    if sys.argv[1] == '-test':
         subprocess.call(['afplay', 'you_suffer.mp3'])
-        local_new_tickets = zendesk_new_tickets # Sets Local Ticket Counter equal to Zendesk
     else:
-        print('waiting for new ticket...') # Status Cue
+        dash = '-' * 40
+        print(dash)
+        print('----------------------------------------')
+        print('{:<10s}{:<30s}'.format('Arg','Description'))
+        print('----------------------------------------')
+        print('{:<10s}{:<30s}'.format('','Provide no args to run script'))
+        print('{:<10s}{:<30s}'.format('-test','Test the mp3 playback'))
 
-    time.sleep(5)
+else:
+    local_new_tickets = functions.get_tickets(tickets_url, user, token) # sets intital local ticket count to match that of Zendesk
+
+    while True:
+        url = tickets_url # resets url for looping
+        zendesk_new_tickets = functions.get_tickets(url, user, token) # gets current ticket count from Zendesk
+
+        # Compare number of New Tickets locally stored to number of New Tickets in Zendesk
+        if local_new_tickets < zendesk_new_tickets:
+            print('New Ticket(s)') #  Status Cue
+            subprocess.call(['afplay', 'you_suffer.mp3'])
+            local_new_tickets = zendesk_new_tickets # Sets Local Ticket Counter equal to Zendesk
+        else:
+            print('waiting for new ticket...') # Status Cue
+
+        time.sleep(5)
