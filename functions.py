@@ -1,5 +1,8 @@
+# MODULES
 import requests
 
+
+# get_tickets
 def get_tickets(url, user, token):
     while url is not None:
         response = requests.get(url, auth=(user, token))
